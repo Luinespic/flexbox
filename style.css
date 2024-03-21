@@ -4,6 +4,7 @@ root {
   --accent-color: #b88e2f;
   --primary-color: white;
   --secondary-color: black;
+  --background-bannercolor: #fff3e3;
   --text-color2: #9f9f9f;
   --text-color3: #d9d9d9;
   --spacing: 20px;
@@ -45,9 +46,10 @@ header > nav {
   height: 30px;
 }
 
-h1 {
+.logo-text {
   font-family: "Montserrat";
   font-size: 30px;
+  font-weight: 600;
 }
 
 #enlaces-header {
@@ -70,16 +72,86 @@ h1 {
   height: 20px;
 }
 
-/* MAIN */
+/* PRINCIPAL BANNER */
 
 #principal-banner {
   background-image: url(/assets/image-banner.png);
   height: 80vh;
   background-position: center;
-  border: 2px solid red;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10vh;
 }
 
 #content-cta {
   width: 500px;
-  border: 2px solid green;
+  height: 330px;
+  background-color: #fff3e3;
+  padding: 40px;
+}
+
+.title2 {
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+h1 {
+  text-transform: capitalize;
+  color: #b88e2f;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.textbanner {
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.button1 {
+  background-color: #b88e2f;
+  padding: 15px 45px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+/* ROOMS BANNERS */
+
+#rooms {
+  margin: 40px auto;
+}
+h2 {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+#rooms > p {
+  text-align: center;
+}
+
+#rooms nav {
+  margin: 40px auto;
+  max-width: 80%;
+}
+
+#rooms ul {
+  display: flex;
+  justify-content: center;
+  gap:10px;
+}
+
+#rooms li {
+    display: flex;
+}
+
+#rooms img {
+  border-radius: 10px;
+}
+
+#rooms a {
+    text-align: center;
+    font-weight: 500;
 }
