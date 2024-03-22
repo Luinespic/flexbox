@@ -191,7 +191,6 @@ h2 {
 footer {
   border-top: 2px solid #9f9f9f45;
   background-color: d9d9d9;
-  padding: 50px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -205,6 +204,7 @@ footer {
 footer > div {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer p {
@@ -221,6 +221,10 @@ footer h3 {
 
 section p {
   margin-bottom: 40px;
+}
+
+footer section {
+    padding: 60px 60px;
 }
 
 #links ul,
