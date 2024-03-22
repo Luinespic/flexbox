@@ -35,6 +35,7 @@ header > nav {
   display: flex;
   max-width: 100%;
   height: 80px;
+  justify-content: space-between;
 }
 
 #logo-header {
@@ -71,6 +72,27 @@ header > nav {
 
 #iconos-header img {
   height: 20px;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+  #iconos-header,
+  #enlaces-header {
+    display: none;
+  }
+  
+  .menu {
+    display:flex;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  .menu img {
+    height: 40px;
+  }
 }
 
 /* PRINCIPAL BANNER */
@@ -148,17 +170,20 @@ h2 {
 }
 
 #rooms li {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 
 #rooms img {
   border-radius: 10px;
+  padding-bottom: 20px;
 }
 
 #rooms a {
   text-align: center;
   font-weight: 500;
+  font-size: 18px;
 }
 
 /* FOOTER */
