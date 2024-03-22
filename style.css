@@ -23,6 +23,7 @@ body {
 
 a {
   color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 ul {
@@ -76,12 +77,12 @@ header > nav {
 
 #principal-banner {
   background-image: url(/assets/image-banner.png);
-  height: 80vh;
+  height: 600px;
   background-position: center;
   display: flex;
   justify-content: end;
   align-items: center;
-  padding-right: 10vh;
+  padding-right: 50px;
 }
 
 #content-cta {
@@ -137,16 +138,19 @@ h2 {
 #rooms nav {
   margin: 40px auto;
   max-width: 80%;
+  border: 2px solid red;
 }
 
 #rooms ul {
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 #rooms li {
-  display: flex;
+    display: flex;
+    flex-direction: column;
 }
 
 #rooms img {
