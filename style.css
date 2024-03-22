@@ -7,7 +7,7 @@ root {
   --background-bannercolor: #fff3e3;
   --text-color2: #9f9f9f;
   --text-color3: #d9d9d9;
-  --spacing: 20px;
+  --spacing: 40px;
 }
 
 * {
@@ -95,6 +95,7 @@ header > nav {
   text-transform: capitalize;
   letter-spacing: 3px;
   font-weight: 600;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -102,7 +103,8 @@ h1 {
   color: #b88e2f;
   font-size: 30px;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 700;
+  padding: 10px 0px;
 }
 
 .textbanner {
