@@ -196,6 +196,12 @@ footer {
   gap: 50px;
 }
 
+@media (max-width: 1050px) {
+    footer div{
+        flex-direction: row-reverse;
+      }
+}
+
 #copyright {
   border-top: 2px solid #9f9f9f45;
   padding: 20px 0;
