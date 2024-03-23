@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-root {
+:root {
   --accent-color: #b88e2f;
-  --primary-color: white;
-  --secondary-color: black;
+  --background-color: white;
+  --text-color: black;
   --background-bannercolor: #fff3e3;
+  --footer-line-color: #9f9f9f45;
   --text-color2: #9f9f9f;
-  --text-color3: #d9d9d9;
   --spacing: 40px;
 }
 
@@ -22,8 +22,7 @@ body {
 }
 
 a {
-  color: var(--secondary-color);
-  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 ul {
@@ -41,7 +40,7 @@ header > nav {
 #logo-header {
   display: flex;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 var(--spacing);
 }
 
 #logo-header img {
@@ -66,8 +65,8 @@ header > nav {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 40px;
-  padding: 0 40px;
+  gap: var(--spacing);
+  padding: 0 var(--spacing);
 }
 
 #iconos-header img {
@@ -75,7 +74,7 @@ header > nav {
 }
 
 .menu {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 1050px) {
@@ -83,15 +82,15 @@ header > nav {
   #enlaces-header {
     display: none;
   }
-  
+
   .menu {
-    display:flex;
+    display: flex;
     align-items: center;
-    padding-right: 20px;
+    padding-right: var(--spacing);
   }
 
   .menu img {
-    height: 40px;
+    height: var(--spacing);
   }
 }
 
@@ -110,8 +109,8 @@ header > nav {
 #content-cta {
   width: 500px;
   height: 330px;
-  background-color: #fff3e3;
-  padding: 40px;
+  background-color: var(--background-bannercolor);
+  padding: var(--spacing);
 }
 
 .title2 {
@@ -123,7 +122,7 @@ header > nav {
 
 h1 {
   text-transform: capitalize;
-  color: #b88e2f;
+  color: var(--accent-color);
   font-size: 30px;
   letter-spacing: 2px;
   font-weight: 700;
@@ -132,16 +131,29 @@ h1 {
 
 .textbanner {
   font-size: 15px;
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing);
 }
 
 .button1 {
-  background-color: #b88e2f;
+  background-color: var(--accent-color);
   padding: 15px 45px;
-  color: white;
+  color: var(--background-color);
   text-transform: uppercase;
   font-size: 15px;
 }
+
+@media (max-width: 1050px){
+    #principal-banner {
+        justify-content: center;
+        padding-right: 0;
+    }
+    
+    #content-cta {
+        width: 70%;
+        height: auto;
+    }
+}
+
 
 /* ROOMS BANNERS */
 
@@ -158,7 +170,7 @@ h2 {
 }
 
 #rooms nav {
-  margin: 40px auto;
+  margin: var(--spacing) auto;
   max-width: 80%;
 }
 
@@ -189,22 +201,15 @@ h2 {
 /* FOOTER */
 
 footer {
-  border-top: 2px solid #9f9f9f45;
-  background-color: d9d9d9;
+  border-top: 2px solid var(--footer-line-color);
   display: flex;
   flex-direction: column;
-  gap: 50px;
-}
-
-@media (max-width: 1050px) {
-    footer div{
-        flex-direction: row-reverse;
-      }
+  gap: var(--spacing);
 }
 
 #copyright {
-  border-top: 2px solid #9f9f9f45;
-  padding: 20px 0;
+  border-top: 2px solid var(--footer-line-color);
+  padding: 20px;
 }
 
 footer > div {
@@ -214,11 +219,11 @@ footer > div {
 }
 
 footer p {
-  color: #9f9f9f;
+  color: var(--text-color2);
 }
 
 footer h3 {
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing);
 }
 
 .address {
@@ -226,33 +231,36 @@ footer h3 {
 }
 
 section p {
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing);
 }
 
 footer section {
-    padding: 60px 60px;
+  padding: 60px 60px;
 }
 
 #links ul,
-#help ul,
-#newsletter ul {
+#help ul {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
+#newsletter form {
+  display: flex;
+  gap: 12px;
+}
+
 input[type="email"] {
   border: none;
-  border-bottom: 1px solid black;
-  margin-right: 5px;
+  border-bottom: 1px solid var(--text-color);
   width: 160px;
-  padding-bottom: 5px;
+  padding: 5px;
   text-transform: capitalize;
 }
 
 input[type="submit"] {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--text-color);
   background-color: transparent;
   padding-bottom: 5px;
   width: 85px;
