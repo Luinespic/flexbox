@@ -61,12 +61,33 @@ header > nav {
   gap: 80px;
 }
 
+#enlaces-header li:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
 #iconos-header {
   display: flex;
   align-items: center;
   justify-content: end;
   gap: var(--spacing);
   padding: 0 var(--spacing);
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.textoverlay {
+  font-size: 10px;
+  visibility: hidden;
+}
+
+.icons:hover .textoverlay {
+  visibility: visible;
 }
 
 #iconos-header img {
@@ -142,18 +163,21 @@ h1 {
   font-size: 15px;
 }
 
-@media (max-width: 1050px){
-    #principal-banner {
-        justify-content: center;
-        padding-right: 0;
-    }
-    
-    #content-cta {
-        width: 70%;
-        height: auto;
-    }
+.button1:hover {
+  background-color: var(--text-color);
 }
 
+@media (max-width: 1050px) {
+  #principal-banner {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  #content-cta {
+    width: 70%;
+    height: auto;
+  }
+}
 
 /* ROOMS BANNERS */
 
@@ -187,11 +211,16 @@ h2 {
   padding-bottom: 20px;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 #rooms img {
-  border-radius: 10px;
+  border-radius: 20px;
   padding-bottom: 20px;
+}
+
+#rooms img:hover {
+  transform: scale(1.1);
 }
 
 #rooms a {
@@ -228,6 +257,10 @@ footer h3 {
   margin-bottom: var(--spacing);
 }
 
+footer a:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
 .address {
   margin: 0;
 }
@@ -261,6 +294,10 @@ input[type="email"] {
   text-transform: capitalize;
 }
 
+#email:focus {
+  border: 1px solid var(--text-color);
+}
+
 input[type="submit"] {
   border: none;
   border-bottom: 1px solid var(--text-color);
@@ -268,4 +305,9 @@ input[type="submit"] {
   padding-bottom: 5px;
   width: 85px;
   text-transform: uppercase;
+}
+
+#subscribe:focus {
+  border: 1px solid var(--text-color);
+  padding-top: 5px;
 }
